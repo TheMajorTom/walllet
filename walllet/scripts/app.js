@@ -7,7 +7,9 @@
             return anchorEl.href;
         };
 
-    document.addEventListener("deviceready", function () {
+    document.addEventListener("deviceready", function () 
+    {
+        
         navigator.splashscreen.hide();
 
         app.changeSkin = function (e) {

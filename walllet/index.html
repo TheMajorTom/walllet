@@ -24,15 +24,15 @@
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-                <a id="skin-change" data-role="button" data-align="right" data-click="app.changeSkin">Flat</a>
+                
             </div>
         </header>
 
         <image src="" style="float:left" />
         
-        <h3>Benvindo ao Walllet</h3>
+        <h3>O jeito simples de vender mais com a forma mais segura de pagar!</h3>
         <p>
-            
+            Para criar uma conta walllet é necessário prover informações básicas sobre o seu perfil de pagamento, preferências, endereço e criar suas credenciais de segurança. Clique no botão "Começar" para prosseguir.
         </p>
         <div class="welcome-image"></div>
     </div>
@@ -40,21 +40,21 @@
     
 
     <!--Weather View-->
-    <div id="tabstrip-weather"
+    <div id="tabstrip-wallets"
         data-role="view"
-        data-title="Weather"
-        data-model="app.weatherService.viewModel">
+        data-title="Wallets"
+        data-model="app.walletsServices.viewModel">
 
         <ul data-role="listview" data-style="inset"
-            data-bind="source: weatherDataSource"
-            data-template="weather-forecast-template">
+            data-bind="source: walletsDataSource"
+            data-template="wallets-forecast-template">
         </ul>
     </div>
 
     <!--Weather forecast template-->
-    <script id="weather-forecast-template" type="text/x-kendo-tmpl">
+    <script id="wallets-forecast-template" type="text/x-kendo-tmpl">
         <div class="w-item-template">
-            <span class="w-icon ${image}"></span>
+            <span class="w-icon ${images}"></span>
             <h4 class="w-date">${description}</h4>
             <div class="w-temp">
                 <span>${currency}<sup>&deg;</sup></span>
@@ -74,10 +74,8 @@
         <!--Footer-->
         <div data-role="footer">
             <div data-role="tabstrip">
-                <a href="#/" data-icon="home">Home</a>
-                <a href="#tabstrip-login" data-icon="contacts">Login</a>
-                <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
+                <a href="#/" data-icon="home">Benvindo</a>
+                <a href="#tabstrip-wallets" data-icon="globe">Carteiras</a>
             </div>
         </div>
     </div>

@@ -29,7 +29,7 @@
         }
     });
 
-    app.walletsDataSource = {
+    app.walletsServices = {
         viewModel: new WalletsViewModel()
     };
 })(window);
