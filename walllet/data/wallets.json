@@ -1,0 +1,18 @@
+[
+    {
+        "description": "PayPal",
+        "Oid": "157cb00d-ecd9-4927-8916-335425b59513",
+        "currency": "USD",
+		"images", "images/logotypes/paypal.png"
+    }, {
+        "description": "Itaú",
+        "Oid": "f5424df6-c69d-408f-ad16-38befe4f7c18",
+        "currency": "USD",
+		"images", "images/logotypes/itau.png"
+    }, {
+        "description": "BrasPag",
+        "Oid": "a519cd12-bded-40f2-9bd9-f4978c895690",
+        "currency": "USD",
+		"images", "images/logotypes/braspag.png"
+    }
+]
