@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <ProjectGuid>9bad5ae8-b950-496d-8d0e-a3399658eff1</ProjectGuid>
-        <AppIdentifier>com.telerik.walllet</AppIdentifier>
-        <ProjectName>walllet</ProjectName>
-        <IsRunnable>true</IsRunnable>
-        <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-        <FrameworkVersion>3.2.0</FrameworkVersion>
-        <AndroidPermissions>android.permission.CAMERA;android.permission.VIBRATE;android.permission.ACCESS_COARSE_LOCATION;android.permission.ACCESS_FINE_LOCATION;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS;android.permission.READ_PHONE_STATE;android.permission.INTERNET;android.permission.RECEIVE_SMS;android.permission.RECORD_AUDIO;android.permission.MODIFY_AUDIO_SETTINGS;android.permission.READ_CONTACTS;android.permission.WRITE_CONTACTS;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE;android.permission.ACCOUNT_MANAGER;android.permission.GET_ACCOUNTS;android.permission.MANAGE_ACCOUNTS;android.permission.BROADCAST_STICKY</AndroidPermissions>
-        <CorePlugins>org.apache.cordova.battery-status;org.apache.cordova.camera;org.apache.cordova.console;org.apache.cordova.contacts;org.apache.cordova.device;org.apache.cordova.device-motion;org.apache.cordova.device-orientation;org.apache.cordova.dialogs;org.apache.cordova.file;org.apache.cordova.file-transfer;org.apache.cordova.geolocation;org.apache.cordova.globalization;org.apache.cordova.inappbrowser;org.apache.cordova.media;org.apache.cordova.media-capture;org.apache.cordova.network-information;org.apache.cordova.splashscreen;org.apache.cordova.statusbar;org.apache.cordova.vibration</CorePlugins>
-        <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
-        <iOSStatusBarStyle>Default</iOSStatusBarStyle>
-        <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
-        <WP8SupportedResolutions>ID_RESOLUTION_WVGA;ID_RESOLUTION_WXGA;ID_RESOLUTION_HD720P</WP8SupportedResolutions>
-        <BundleVersion>1.0</BundleVersion>
-    </PropertyGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
+  <PropertyGroup>
+    <ProjectGuid>9bad5ae8-b950-496d-8d0e-a3399658eff1</ProjectGuid>
+    <AppIdentifier>com.telerik.walllet</AppIdentifier>
+    <ProjectName>walllet</ProjectName>
+    <IsRunnable>true</IsRunnable>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <FrameworkVersion>3.2.0</FrameworkVersion>
+    <AndroidPermissions>android.permission.ACCESS_COARSE_LOCATION;android.permission.ACCESS_FINE_LOCATION;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS;android.permission.ACCESS_NETWORK_STATE;android.permission.ACCOUNT_MANAGER;android.permission.BROADCAST_STICKY;android.permission.CAMERA;android.permission.GET_ACCOUNTS;android.permission.INTERNET;android.permission.MANAGE_ACCOUNTS;android.permission.MODIFY_AUDIO_SETTINGS;android.permission.READ_CONTACTS;android.permission.READ_PHONE_STATE;android.permission.RECEIVE_SMS;android.permission.RECORD_AUDIO;android.permission.VIBRATE;android.permission.WRITE_CONTACTS;android.permission.WRITE_EXTERNAL_STORAGE</AndroidPermissions>
+    <CorePlugins>org.apache.cordova.battery-status;org.apache.cordova.camera;org.apache.cordova.media-capture;org.apache.cordova.console;org.apache.cordova.contacts;org.apache.cordova.device;org.apache.cordova.device-motion;org.apache.cordova.device-orientation;org.apache.cordova.file;org.apache.cordova.file-transfer;org.apache.cordova.geolocation;org.apache.cordova.globalization;org.apache.cordova.inappbrowser;org.apache.cordova.media;org.apache.cordova.network-information;org.apache.cordova.dialogs;org.apache.cordova.splashscreen;org.apache.cordova.statusbar;org.apache.cordova.vibration</CorePlugins>
+    <DeviceOrientations>Portrait</DeviceOrientations>
+    <iOSStatusBarStyle>Default</iOSStatusBarStyle>
+    <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
+    <WP8SupportedResolutions>ID_RESOLUTION_WVGA;ID_RESOLUTION_WXGA;ID_RESOLUTION_HD720P</WP8SupportedResolutions>
+    <BundleVersion>1.0</BundleVersion>
+    <DisplayName />
+    <Author />
+    <Description>walllet</Description>
+    <iOSDeviceFamily>1</iOSDeviceFamily>
+    <iOSBackgroundMode />
+    <AndroidVersionCode>1</AndroidVersionCode>
+    <WP8TileTitle />
+    <WP8ProductID>{9bad5ae8-b950-496d-8d0e-a3399658eff1}</WP8ProductID>
+    <WP8PublisherID>{27fa9c16-64b7-4901-9b54-c16dedf27a45}</WP8PublisherID>
+    <WP8Publisher />
+    <WP8Capabilities />
+    <WP8Requirements />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>

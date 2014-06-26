@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/app.js"></script>
+
+    </head>
+    <body>
+                <!--Welcome View-->
+        <div id="tabstrip-welcome" style="background-color:#fff"
+             data-role="view"
+             data-title="Endereço Principal">
+
+            <header data-role="header" >
+                <div data-role="navbar" >
+                    <span data-role="view-title" ></span>
+                </div>
+            </header>
+
+            <p class="text-regular" >
+                Entre com os dados de seu endereço principal:
+            </p>
+
+            <div class="form-Container" >
+                <label>
+                    <div class="text-formContainer" >
+                       País
+                    </div>
+                    <div class="form-inputContainer">
+                    	<input type="text" value="" class="form-textbox"/>
+                    </div>
+                </label>
+            </div>
+                
+        	<div class="form-Container">
+                <label>
+                    <div class="text-formContainer" >
+                       CEP
+                    </div>
+                    <div class="form-inputContainer">
+                    	<input type="numeric" value="" class="form-textbox-small"/>
+                    </div>
+                </label>
+            </div>
+       
+        	<div class="form-Container">
+                <label>
+                    <div class="text-formContainer" >
+                       End.
+                    </div>
+                    <div class="form-inputContainer">
+                    	<input type="text" value="" class="form-textbox"/>
+                    </div>
+                </label>
+            </div>
+            
+        	<div class="form-Container">
+                <label>
+                    <div class="text-formContainer" >
+                       Comp.
+                    </div>
+                    <div class="form-inputContainer">
+                    	<input type="text" value="" class="form-textbox"/>
+                    </div>
+                </label>
+            </div>       
+            
+            <div class="form-Container">
+                <label>
+                    <div class="text-formContainer" >
+                       Cidade
+                    </div>
+                    <div class="form-inputContainer">
+                    	<input type="text" value="" class="form-textbox"/>
+                    </div>
+                </label>
+            </div>       
+    		<div class="form-Container">
+                <label>
+                    <div class="text-formContainer" >
+                       Estado
+                    </div>
+                    <div class="form-inputContainer">
+                    	<input type="text" value="" class="form-textbox"/>
+                    </div>
+                </label>
+            </div>       
+
+                <div class="button-Container">
+        	<a data-role="button" class="default-button" href="wallets.html">Salvar</a>
+        </div>
+            
+        </div>
+
+        <script>
+            var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip"});
+        </script>
+
+
+    </body>
+</html>

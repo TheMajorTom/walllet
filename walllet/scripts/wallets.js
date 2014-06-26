@@ -11,9 +11,7 @@
                 jsonUrlToLoad;
 
             kendo.data.ObservableObject.fn.init.apply(that, []);
-
-            //When you build for Apache Cordova 3.0.0, apply this code instead of using relative URLs. In Apache Cordova 3.0.0, relative URLs might not work properly.
-            //jsonUrlToLoad = app.makeUrlAbsolute("data/weather.json");
+            
             jsonUrlToLoad = "data/wallets.json";
 
             dataSource = new kendo.data.DataSource({

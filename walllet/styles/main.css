@@ -1,12 +1,101 @@
 /* IMAGES */
-.welcome-image {
-    background-image: url(../styles/images/appbuilder.png);
+.welcome-image 
+{
+    background-image: url(../styles/images/logotypes/walllet.png);
     background-repeat: no-repeat;
-    width: 320px;
-    height: 250px;
+    width: 126px;
+    height: 135px;
     display: block;
-    margin: 0px auto;
+    margin: 25px auto;
 }
+
+.main-background
+{
+    
+}
+
+.text-regular
+{
+    margin-top:30px;
+    margin-bottom:30px;
+    text-align:center;
+    font-size:12pt;
+}
+
+.text-formContainer
+{
+    float:left;
+    margin-right:7px;
+    margin-top:4px;
+    margin-left:15px;
+    margin-bottom:7px;
+    text-align:left;
+    font-size:10pt;
+    width:40px;
+}
+
+.form-inputContainer
+{
+    float:left;
+    width:230px
+}
+
+.form-Container { 
+    border:0px solid red;
+    width:100%;
+    margin:10px auto;
+    height:30px;
+    margin-bottom:7px;
+    clear:both;
+    border:1px solid transparent;
+    height:30px;
+}
+
+.form-button-big
+{
+    font-size:16pt; 
+    font-weight:600;
+    width:200px;
+    margin: 12px auto;
+    display: block;
+    text-align:center;
+    height:40px;
+    padding:0px; 
+    
+}
+
+.form-textbox
+{
+    border:1px solid #d2d2d2;
+    width:100%;
+    margin:0px auto;
+    height:30px
+}
+
+.form-textbox-small
+{
+    border:1px solid #d2d2d2;
+    margin:0px auto;
+    height:30px;
+	width:100px;    
+}
+
+.button-Container
+{
+    position:absolute;
+    width:100%;
+    bottom:50px;
+}
+
+.button-sequence
+{
+    margin-top:7px;
+    font-size:14pt; 
+    font-weight:600;
+    width:200px
+}
+
+
 .logo-image {
     background-image: url(../styles/images/logo.png);
     background-repeat: no-repeat;
@@ -15,6 +104,15 @@
     display: block;
     margin: 0px auto;
 }
+
+.default-button  {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    text-align:center;
+}
+
+
 
 /* LOGIN VIEW STYLES */
 .login-button {

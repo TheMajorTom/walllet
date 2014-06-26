@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+ 		<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/app.js"></script>
+
+    </head>
+
+    <body>
+
+        <!--Welcome View-->
+        <div id="tabstrip-welcome" style="background-color:#fff"
+             data-role="view"
+             data-title="Carteiras Eletrônicas">
+
+            <header data-role="header" >
+                <div data-role="navbar" >
+                    <span data-role="view-title" ></span>
+                </div>
+            </header>
+
+            <p class="text-regular" >
+                Selecione a sua <br/>carteira eletrônica abaixo:
+            </p>
+
+           
+        		<a data-role="button" class="form-button-big" href="email.html" style="padding:3px;font-size:15pt">PayPal</a>
+                <a data-role="button" class="form-button-big" href="email.html" style="padding:3px;font-size:15pt">Itaú</a>
+                <a data-role="button" class="form-button-big" href="email.html" style="padding:3px 0px;font-size:15pt">BrasPag</a>
+       	 
+
+        </div>
+
+      
+
+        <script>
+            var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip"});
+        </script>
+
+    </body>
+</html>
