@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-        <link href="styles/main.css" rel="stylesheet" />
+        <link href="styles/wallletCustomStyle.css" rel="stylesheet" />
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
@@ -13,7 +13,7 @@
 
         <div id="tabstrip-paypalverification" 
              data-role="view"
-             data-title="Identificação PayPal" data-init="onInit" id="form">
+             data-title="Identificação PayPal" data-init="InitValidator">
 
             <header data-role="header" >
                 <div data-role="navbar" >
@@ -27,11 +27,11 @@
 
             <div class="form-Container">
                 <label>
-                    <div class="text-formContainer" >
-                        E-mail:
+                    <div class="text-formContainer" style="white-space:nowrap;margin-top:8px;">
+                        E-mail
                     </div>
                     <div style="float:left;width:230px">
-                        <input type="email" class="k-textbox" id="email" name="email" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px" validationMessage="Informe um e-mail válido" required=""/>
+                        <input type="email" class="k-textbox" id="email" name="email"  validationMessage="Informe um e-mail válido" required=""/>
                         <div class="validation-summary" style="margin-top:-10px;padding-top:10px;padding-bottom:10px;">
                             <span class="k-invalid-msg" data-for="email"></span>
                         </div>
@@ -41,49 +41,51 @@
                 </label>
             </div>
 
-            <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" type="button" id="validate" data-click="validate" >Validar</a>
+            <style>
+                .km-arrow-e:after,
+                .km-arrow-e:before
+                {
+                    content: "\e030";
+                }
+            </style>
+
+            <div data-role="footer" >
+                <div data-role="tabstrip" id="custom-tabstrip" data-select="tabstripOnSelect">
+                    
+                    <a data-icon="arrow-e">Salvar</a>
+                    
+                </div>
+            </div>
+
         </div>
 
-        <style scoped>
-            .validation-summary
-            {
-                min-height: 0.001em;
-                background-color: #fff;
-            }
-            
-            .validation-summary .k-invalid-msg
-            {
-                font-size: 10pt;
-                color: red;
-                display: block;
-                margin: 10px 10px 10px 0px;
-            }
-            
-            #email{
-                 width:220px;
-                font-size:10pt;
-                color:blue;
-                padding-left:5px;
-            }
-            
-            </style>
-        
         <script>
         
-            var app = new kendo.mobile.Application(), validator;
+            //var app = new kendo.mobile.Application(), validator;
             
-            function onInit(e) {
+           /* function onInit(e) 
+            {
                 validator = e.view.element.kendoValidator().data("kendoValidator");
             }
             
-            function validate() {
-                if (validator.validate()) {
-                    app.navigate("address.html");
-                } else {
-                }
-            }
+            function onSelect(e) 
+            {
+                
+                var x = $(e.item).index();
+                
+                if (x === 1) 
+                {
+                    if (validator.validate()) 
+                    {
+                        app.navigate("address.html");
+                    }
+                } 
+                
+                e.preventDefault();
+                
+            }*/
             
         </script>
-        
+            
     </body>
 </html>

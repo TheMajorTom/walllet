@@ -44,72 +44,52 @@
                 </li>
                 <li>
                     <label for="cep" class="text-formContainer" style="width:50px;margin-left:0px">CEP</label>
-                    <input type="text" id="cep" name="cep" required="" style="width:220px;font-size:10pt" maxlength=8  validationMessage="• Informe um cep"/>
+                    <input type="text" id="cep" name="cep" required="" maxlength=8  validationMessage="• Informe um cep"/>
                 </li>
                 <li>
                     <label for="address"  class="text-formContainer" style="width:50px;margin-left:0px">Endereço</label>
-                    <textarea id="address" name="address" required="" style="width:220px;resize: none;font-size:10pt" maxlength=255 validationMessage="• Informe um endereço"></textarea>
+                    <textarea id="address" name="address" required="" maxlength=255 validationMessage="• Informe um endereço"></textarea>
                 </li>
                 <li>
                     <label for="compl"  class="text-formContainer" style="width:50px;margin-left:0px">Comp.</label>
-                    <input type="text" id="compl" name="compl" required="Informe um complemento" style="width:220px;font-size:10pt" maxlength=255 validationMessage="• Informe um complemento"/>
+                    <input type="text" id="compl" name="compl" required="Informe um complemento" maxlength=255 validationMessage="• Informe um complemento"/>
                 </li>
                 <li>
                     <label for="city" class="text-formContainer" style="width:50px;margin-left:0px">Cidade</label>
-                    <input type="text" id="city" name="city" required="" style="width:220px;font-size:10pt" maxlength=255 validationMessage="• Informe uma cidade"/>
+                    <input type="text" id="city" name="city" required="" maxlength=255 validationMessage="• Informe uma cidade"/>
                 </li>
                 <li>
                     <label for="state" class="text-formContainer" style="width:50px;margin-left:0px">Estado</label>
-                    <input type="text" id="state" name="state" required="" style="width:220px;font-size:10pt" maxlength=255 validationMessage="• Informe um estado"/>
+                    <input type="text" id="state" name="state" required="" maxlength=255 validationMessage="• Informe um estado"/>
                 </li>
 
             </ul>
-
-            <a data-click="validate" id="register" type="button" data-role="button">Register</a>
+            
+            <style>
+                .km-arrow-e:after,
+                .km-arrow-e:before
+                {
+                    content: "\e030";
+                }
+                .km-arrow-a:after,
+                .km-arrow-a:before
+                {
+                    content: "\e013";
+                }
+            </style>
+            
+            <div data-role="footer">
+                <div data-role="tabstrip" id="custom-tabstrip" data-select="onSelect">
+                    <a href="email.html" data-icon="arrow-a">Voltar</a>
+    				<a data-icon="arrow-e">Salvar</a>
+                </div>
+            </div>
             
 
         </div>
-        <style scoped>
-            .validation-summary
-            {
-                min-height: 0.001em;
-				background-color:#fff;
-            }
-            
-            .validation-summary .k-invalid-msg
-            {
-                font-size: 10pt;
-                color: red;
-                display: block;
-                margin: 10px;
-            }
-            
-            #register,
-            #clear
-            {
-                display: block;
-                text-align: center;
-                margin: .6em .8em 0;
-                padding: .5em 0;
-                font-size: 1.2em;
-            }
-            
-            #country, 
-            #cep, 
-            #address, 
-            #compl,
-            #city,
-            #state
-            {
-                width:220px;
-                font-size:10pt;
-                color:blue;
-            }
-            
-        </style>
         
         <script>
-            var app = new kendo.mobile.Application(),
+           /* var app = new kendo.mobile.Application(),
                 validator;
             
             function onInit(e)
@@ -130,6 +110,32 @@
                 $(".validation-summary .k-invalid-msg").hide();
                 app.view().scroller.reset();
             }
+            */
+            
+             var app = new kendo.mobile.Application(), validator;
+            
+            function onInit(e) 
+            {
+                validator = e.view.element.kendoValidator().data("kendoValidator");
+            }
+            
+            function onSelect(e) 
+            {
+                
+                var x = $(e.item).index();
+                
+                if (x === 1) 
+                {
+                    if (validator.validate()) 
+                    {
+                        app.navigate("pin.html");
+                    }
+                } 
+                
+                e.preventDefault();
+                
+            }
+            
         </script>
     
     </body>

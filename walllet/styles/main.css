@@ -16,97 +16,97 @@
 
 .text-regular
 {
-    margin-top:25px;
-    margin-bottom:30px;
-    text-align:center;
-    font-size:12pt;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 12pt;
 }
 
 .pin-textbox
 {
-    border:1px solid darkgray;
-    width:50px;
-    height:50px;
-    font-size:20pt;
-    text-align:center;
-    float:left;margin-right:5px;
+    border: 1px solid darkgray;
+    width: 50px;
+    height: 50px;
+    font-size: 20pt;
+    text-align: center;
+    float: left; margin-right: 5px;
 }
 
 .text-formContainer
 {
-    float:left;
-    margin-right:7px;
-    margin-top:4px;
-    margin-left:15px;
-    margin-bottom:7px;
-    text-align:left;
-    font-size:10pt;
-    width:40px;
+    float: left;
+    margin-right: 7px;
+    margin-top: 4px;
+    margin-left: 15px;
+    margin-bottom: 7px;
+    text-align: left;
+    font-size: 10pt;
+    width: 40px;
 }
 
 .form-inputContainer
 {
-    float:left;
-    width:230px
+    float: left;
+    width: 230px
 }
 
-.form-Container { 
-    border:0px solid red;
-    width:100%;
-    margin:10px auto;
-    height:30px;
-    margin-bottom:7px;
-    clear:both;
-    border:1px solid transparent;
-    height:30px;
+.form-Container
+{ 
+    border: 0px solid red;
+    width: 100%;
+    margin: 10px auto;
+    height: 30px;
+    margin-bottom: 7px;
+    clear: both;
+    border: 1px solid transparent;
+    height: 30px;
 }
 
 .form-button-big
 {
-    font-size:16pt; 
-    font-weight:600;
-    width:200px;
+    font-size: 16pt; 
+    font-weight: 600;
+    width: 200px;
     margin: 12px auto;
     display: block;
-    text-align:center;
-    height:40px;
-    padding:0px; 
-    
+    text-align: center;
+    height: 40px;
+    padding: 0px; 
 }
 
 .form-textbox
 {
-    border:1px solid #d2d2d2;
-    width:100%;
-    margin:0px auto;
-    height:30px
+    border: 1px solid #d2d2d2;
+    width: 100%;
+    margin: 0px auto;
+    height: 30px
 }
 
 .form-textbox-small
 {
-    border:1px solid #d2d2d2;
-    margin:0px auto;
-    height:30px;
-	width:100px;    
+    border: 1px solid #d2d2d2;
+    margin: 0px auto;
+    height: 30px;
+    width: 100px; 
 }
 
 .button-Container
 {
-    position:absolute;
-    width:100%;
-    bottom:20px;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
 }
 
 .button-sequence
 {
-    margin-top:7px;
-    font-size:14pt; 
-    font-weight:600;
-    width:200px
+    margin-top: 7px;
+    font-size: 14pt; 
+    font-weight: 600;
+    width: 200px
 }
 
-
-.logo-image {
+.logo-image
+{
     background-image: url(../styles/images/logo.png);
     background-repeat: no-repeat;
     width: 319px;
@@ -117,46 +117,46 @@
 
 .default-button  
 {
-    position:absolute;
-    bottom:30px;
-    left:15%;
-    text-align:center;
-    width:70%;
-    height:50px;
-    font-size:14pt;
+    position: absolute;
+    bottom: 30px;
+    left: 15%;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    font-size: 14pt;
 }
-
 
 .km-ios .km-button
 {
 
-    position:absolute;
-    bottom:30px;
-    left:15%;
-    text-align:center;
-    width:70%;
-    height:50px;
-    font-size:16pt !important;
+    position: absolute;
+    bottom: 30px;
+    left: 15%;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    font-size: 16pt !important;
 }
 
-
 /* LOGIN VIEW STYLES */
-.login-button {
+.login-button
+{
     margin: 0 auto;
     display: block;
     width: 200px;
-    
 }
 
 /* LOCATION VIEW STYLES */
-.map {
+.map
+{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.map-tools {
+.map-tools
+{
     position: absolute;
     top: 0;
     left: 0;
@@ -165,13 +165,15 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-.map-tools > div {
+.map-tools > div
+{
     position: relative;
     text-align: center;
     height: 100%;
 }
 
-.map-tools .map-tools-button {
+.map-tools .map-tools-button
+{
     position: absolute;
     top: 0;
     width: 60px;
@@ -184,7 +186,8 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
-.map-tools .map-tools-button:before {
+.map-tools .map-tools-button:before
+{
     content: "";
     position: absolute;
     width: 40px;
@@ -197,10 +200,12 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
-.map-tools .map-tools-button.home {
+.map-tools .map-tools-button.home
+{
     left: 0;
 }
-.map-tools .map-tools-button.search {
+.map-tools .map-tools-button.search
+{
     right: 0;
 }
 .map-tools .map-tools-button.home:before { background-image: url(../styles/images/location.png); }
@@ -208,18 +213,21 @@
 .map-tools .map-tools-button.search:before { background-image: url(../styles/images/search.png); }
 .map-tools .map-tools-button.search:active:before { background-image: url(../styles/images/search_active.png); }
 
-.map-tools input[type=search].map-tools-input {
+.map-tools input[type=search].map-tools-input
+{
     height: 100%;
     width: 65%;
     margin: 1em 0;
     padding: 0.5em 1em;
 }
-.km-wp .map-tools input[type=search].map-tools-input {
+.km-wp .map-tools input[type=search].map-tools-input
+{
     width: 50%;
 }
 
 /* WEATHER VIEW STYLES */
-.w-icon {
+.w-icon
+{
     width: 32px;
     height: 32px;
     background-image: url(../styles/images/sprite-weather.png);
@@ -233,52 +241,167 @@
 .w-icon.foggy { background-position: 0px -160px; }
 .w-icon.storm { background-position: 0px -192px; }
 
-.w-item-template:after {
+.w-item-template:after
+{
     clear: both;
 }
-.w-item-template > .w-icon {
+.w-item-template > .w-icon
+{
     float: left;
 }
-.w-item-template > .w-date {
+.w-item-template > .w-date
+{
     float: left;
     margin: 0.5em 0 0 1em;
 }
-.w-item-template > .w-temp {
+.w-item-template > .w-temp
+{
     float: right;
     margin-top: 0.2em;
 }
-.w-item-template > .w-temp > span:last-of-type {
+.w-item-template > .w-temp > span:last-of-type
+{
     opacity: 0.5;
 }
 
 /* RETINA DISPLAY STYLES */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-    .welcome-image {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi)
+{
+    .welcome-image
+    {
         background-image: url(../styles/images/appbuilder2x.png);
         background-size: 100%;
     }
-    .logo-image {
+    .logo-image
+    {
         background-image: url(../styles/images/logo2x.png);
         background-size: 100%;
     }
-    .w-icon {
+    .w-icon
+    {
         background-image: url(../styles/images/sprite-weather2x.png);
         background-size: 100%;
     }
-    .map-tools .map-tools-button:before.home {
+    .map-tools .map-tools-button:before.home
+    {
         background-image: url(../styles/images/location2x.png);
         background-size: 100%;
     }
-    .map-tools .map-tools-button:before.home:active {
+    .map-tools .map-tools-button:before.home:active
+    {
         background-image: url(../styles/images/location_active2x.png);
         background-size: 100%;
     }
-    .map-tools .map-tools-button:before.search {
+    .map-tools .map-tools-button:before.search
+    {
         background-image: url(../styles/images/search2x.png);
         background-size: 100%;
     }
-    .map-tools .map-tools-button:before.search:active {
+    .map-tools .map-tools-button:before.search:active
+    {
         background-image: url(../styles/images/search_active2x.png);
         background-size: 100%;
     }
+}
+
+.km-view-title, .km-tabstrip, .km-footer
+{
+    color:red;
+    background:#00aeef;
+}
+
+            
+                
+
+.km-ios #custom-tabstrip .km-button:active,
+.km-ios #custom-tabstrip .km-state-active
+{
+    box-shadow: inset 0 0 20px #230e04;
+}
+
+
+#custom-tabstrip .km-text
+{
+    color: #fff;
+    border: 1px solid transparent;
+    font-size: 8pt;
+    text-transform: uppercase;
+}
+
+#custom-tabstrip .km-icon
+{
+    color: #00aeef;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    border: 1px solid transparent;
+    font-size: 22pt;
+}
+
+
+#custom-tabstrip .km-state-active .km-text,
+#custom-tabstrip .km-state-active .km-icon
+{
+    color: #62cb62;
+    background-color: transparent;
+}
+
+
+#tabstrip-appearance-header .km-navbar .km-button
+{
+    /*background-color: rgba(131, 81, 42, .4);*/
+}
+
+.customHeaderTitle
+{
+    color:#fff;
+}
+
+#tabstrip-appearance-header .km-navbar .km-view-title,
+#tabstrip-appearance-header .km-navbar .km-text
+{
+    color: #fff; 
+    text-shadow: 0 1px 0 #fff;
+}
+
+#tabstrip-layout
+{
+    background-color:red;
+}
+
+#email
+{
+    width: 230px;
+    font-size: 12pt;
+    color: blue;
+    padding-left: 5px;
+    border: 1px solid #d2d2d2;
+    margin: 0px auto;
+    height: 40px
+}
+            
+#country, 
+#cep, 
+#address, 
+#compl,
+#city,
+#state
+{
+    width: 220px;
+    font-size: 12pt;
+    color: blue;
+}
+
+
+.validation-summary
+{
+    min-height: 0.001em;
+    background-color: #fff;
+}
+            
+.validation-summary .k-invalid-msg
+{
+    font-size: 10pt;
+    color: red;
+    display: block;
+    margin: 10px 10px 10px 0px;
 }

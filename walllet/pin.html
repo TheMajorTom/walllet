@@ -60,14 +60,54 @@
 
             <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" data-click="validatepin">Salvar</a>
 
+              <style>
+                .km-arrow-e:after,
+                .km-arrow-e:before
+                {
+                    content: "\e030";
+                }
+                .km-arrow-a:after,
+                .km-arrow-a:before
+                {
+                    content: "\e013";
+                }
+            </style>
+            
+            <div data-role="footer">
+                <div data-role="tabstrip" id="custom-tabstrip" data-select="onSelect">
+                    <a href="address.html" data-icon="arrow-a">Voltar</a>
+    				<a data-icon="arrow-e">Salvar</a>
+                </div>
+            </div>
+            
         </div>
         
         <script>
-            function validatepin()
+            
+            var app = new kendo.mobile.Application(), validator;
+            
+            function onInit(e) 
             {
-                var bla = $('#pin1').val();
-                alert(bla);
+                validator = e.view.element.kendoValidator().data("kendoValidator");
             }
+            
+            function onSelect(e) 
+            {
+                
+                var x = $(e.item).index();
+                
+                if (x === 1) 
+                {
+                    if (validator.validate()) 
+                    {
+                        app.navigate("pin.html");
+                    }
+                } 
+                
+                e.preventDefault();
+                
+            }
+            
         </script>
         
     </body>

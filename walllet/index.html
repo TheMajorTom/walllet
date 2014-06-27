@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/wallletCustomStyle.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/app.js"></script>
+    </head>
 
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+    <body >
+        <!--Welcome View-->
+        <div id="tabstrip-layout"  data-role="view" data-title="Bem-vindo ao Walllet" >
+            <header data-role="header" >
+                <div data-role="navbar" >
+                    <span data-role="view-title" class="customHeaderTitle"></span>
+                </div>
+            </header>
 
-    <script src="scripts/app.js"></script>
-    <script src="scripts/login.js"></script>
-    <script src="scripts/location.js"></script>
-    <script src="scripts/wallets.js"></script>
-</head>
-    
-<body >
-    
-    
-    <script>
-        new kendo.mobile.Application($(document.body), 
-        {
-            platform:"ios7"
-    	});
-    </script>
-    
-    <!--Welcome View-->
-    <div id="tabstrip-layout" style="background-color:#fff"
-        data-role="view"
-        data-title="Bem-vindo ao Walllet" >
-        <header data-role="header" >
-            <div data-role="navbar" >
-                <span data-role="view-title" ></span>
+            <div class="welcome-image"></div>
+            <p class="text-regular">
+                Para criar sua conta walllet é necessário configurarmos o seu perfil. Clique no botão "Começar" para prosseguir.
+            </p>
+ 			<style>
+                .km-arrow-e:after,
+                .km-arrow-e:before
+                {
+                    content: "\e030";
+                }
+            </style>
+            <div data-role="footer">
+                <div data-role="tabstrip" id="custom-tabstrip">
+                    <a href="email.html" data-icon="details">Começar</a>
+                </div>
             </div>
-        </header>
-        
-        <div class="welcome-image"></div>
-        <p class="text-regular">
-            Para criar sua conta walllet é necessário configurarmos o seu perfil. Clique no botão "Começar" para prosseguir.
-        </p>
-        <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="wallets.html">Começar</a>
-    </div>
-</body>
+        </div>
+        <script>
+            
+            var app = new kendo.mobile.Application(document.body);
+        </script>
+    </body>
 </html>
