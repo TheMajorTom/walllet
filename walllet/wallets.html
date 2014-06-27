@@ -30,15 +30,16 @@
                 Selecione a sua <br/>carteira eletrônica abaixo:
             </p>
 
-           
-        		<a data-role="button" class="form-button-big" href="email.html" style="padding:3px;font-size:15pt">PayPal</a>
-                <a data-role="button" class="form-button-big" href="email.html" style="padding:3px;font-size:15pt">Itaú</a>
-                <a data-role="button" class="form-button-big" href="email.html" style="padding:3px 0px;font-size:15pt">BrasPag</a>
+    		<a data-role="button" class="form-button-big" href="email.html" style="padding:3px;font-size:15pt" >PayPal</a>
+            <a data-role="button" class="form-button-big" style="padding:3px;font-size:15pt" data-click="ShowMessage">Itaú</a>
+            <a data-role="button" class="form-button-big" style="padding:3px 0px;font-size:15pt" data-click="ShowMessage">BrasPag</a>
+        	<a data-role="button" class="form-button-big" style="padding:3px 0px;font-size:15pt" data-click="ShowMessage">PagSeguro</a>
        	 
-
         </div>
 
-      
+        <script>
+			function ShowMessage() { alert("Carteira eletrônica não disponível."); }
+        </script>      
 
 
     </body>

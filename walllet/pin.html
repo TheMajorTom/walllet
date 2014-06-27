@@ -32,7 +32,7 @@
                 <div style="margin:20px auto;display: block;border:0px solid red;text-align:center;width:100%;height:50px">
                     <center>
                         <div style="margin:10px auto;display:block;width:275px">
-                            <input type="password" id="pin1" value="" class="pin-textbox" maxlength=1/>
+                            <input type="text" id="pin1" name="pin1" class="pin-textbox" maxlength=1 data-role="input"/>
                             <input type="password" id="pin2" value="" class="pin-textbox" maxlength=1/>
                             <input type="password" id="pin3" value="" class="pin-textbox" maxlength=1/>
                             <input type="password" id="pin4" value="" class="pin-textbox" maxlength=1/>
@@ -58,8 +58,17 @@
                 </div>
             </div>
 
-            <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="congratulations.html">Salvar</a>
+            <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" data-click="validatepin">Salvar</a>
 
         </div>
+        
+        <script>
+            function validatepin()
+            {
+                var bla = $('#pin1').val();
+                alert(bla);
+            }
+        </script>
+        
     </body>
 </html>

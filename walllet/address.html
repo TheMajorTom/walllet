@@ -16,86 +16,121 @@
         <!--Welcome View-->
         <div id="tabstrip-welcome" style="background-color:#fff"
              data-role="view"
-             data-title="Endereço Principal">
+             data-title="Endereço Principal" data-init="onInit">
 
             <header data-role="header" >
                 <div data-role="navbar" >
                     <span data-role="view-title" ></span>
                 </div>
             </header>
-
-            <p class="text-regular" >
-                Entre com os dados de seu endereço principal:
+            
+              <p class="text-regular" style="margin-bottom:-10px;">
+                Informe os dados de seu endereço
             </p>
 
-            <div class="form-Container" style="margin-top:-10px">
-                <label>
-                    <div class="text-formContainer" >
-                        País
-                    </div>
-                    <div class="form-inputContainer">
-                        <input type="text" value="" class="form-textbox"/>
-                    </div>
-                </label>
+            <div class="validation-summary" style="margin-top:-10px;padding-top:10px;padding-bottom:10px;">
+                <span class="k-invalid-msg" data-for="country"></span>
+                <span class="k-invalid-msg" data-for="cep"></span>
+                <span class="k-invalid-msg" data-for="address"></span>
+                <span class="k-invalid-msg" data-for="compl"></span>
+                <span class="k-invalid-msg" data-for="city"></span>
+                <span class="k-invalid-msg" data-for="state"></span>
             </div>
 
-            <div class="form-Container">
-                <label>
-                    <div class="text-formContainer" >
-                        CEP
-                    </div>
-                    <div class="form-inputContainer">
-                        <input type="numeric" value="" class="form-textbox-small"/>
-                    </div>
-                </label>
-            </div>
+            <ul id="list" data-role="listview" data-style="inset" >
+                <li>
+                    <label for="country" class="text-formContainer" style="width:50px;margin-left:0px">País</label>
+                    <input type="text" id="country" name="country" required=""  class="text-edition" maxlength=255 validationMessage="• Informe um país"/>
+                </li>
+                <li>
+                    <label for="cep" class="text-formContainer" style="width:50px;margin-left:0px">CEP</label>
+                    <input type="text" id="cep" name="cep" required="" style="width:220px;font-size:10pt" maxlength=8  validationMessage="• Informe um cep"/>
+                </li>
+                <li>
+                    <label for="address"  class="text-formContainer" style="width:50px;margin-left:0px">Endereço</label>
+                    <textarea id="address" name="address" required="" style="width:220px;resize: none;font-size:10pt" maxlength=255 validationMessage="• Informe um endereço"></textarea>
+                </li>
+                <li>
+                    <label for="compl"  class="text-formContainer" style="width:50px;margin-left:0px">Comp.</label>
+                    <input type="text" id="compl" name="compl" required="Informe um complemento" style="width:220px;font-size:10pt" maxlength=255 validationMessage="• Informe um complemento"/>
+                </li>
+                <li>
+                    <label for="city" class="text-formContainer" style="width:50px;margin-left:0px">Cidade</label>
+                    <input type="text" id="city" name="city" required="" style="width:220px;font-size:10pt" maxlength=255 validationMessage="• Informe uma cidade"/>
+                </li>
+                <li>
+                    <label for="state" class="text-formContainer" style="width:50px;margin-left:0px">Estado</label>
+                    <input type="text" id="state" name="state" required="" style="width:220px;font-size:10pt" maxlength=255 validationMessage="• Informe um estado"/>
+                </li>
 
-            <div class="form-Container">
-                <label>
-                    <div class="text-formContainer" >
-                        End.
-                    </div>
-                    <div class="form-inputContainer">
-                        <input type="text" value="" class="form-textbox"/>
-                    </div>
-                </label>
-            </div>
+            </ul>
 
-            <div class="form-Container">
-                <label>
-                    <div class="text-formContainer" >
-                        Comp.
-                    </div>
-                    <div class="form-inputContainer">
-                        <input type="text" value="" class="form-textbox"/>
-                    </div>
-                </label>
-            </div>
-
-            <div class="form-Container">
-                <label>
-                    <div class="text-formContainer" >
-                        Cidade
-                    </div>
-                    <div class="form-inputContainer">
-                        <input type="text" value="" class="form-textbox"/>
-                    </div>
-                </label>
-            </div>
-            <div class="form-Container">
-                <label>
-                    <div class="text-formContainer" >
-                        Estado
-                    </div>
-                    <div class="form-inputContainer">
-                        <input type="text" value="" class="form-textbox"/>
-                    </div>
-                </label>
-            </div>
+            <a data-click="validate" id="register" type="button" data-role="button">Register</a>
             
-            <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="preferences.html">Salvar</a>
 
         </div>
-
+        <style scoped>
+            .validation-summary
+            {
+                min-height: 0.001em;
+				background-color:#fff;
+            }
+            
+            .validation-summary .k-invalid-msg
+            {
+                font-size: 10pt;
+                color: red;
+                display: block;
+                margin: 10px;
+            }
+            
+            #register,
+            #clear
+            {
+                display: block;
+                text-align: center;
+                margin: .6em .8em 0;
+                padding: .5em 0;
+                font-size: 1.2em;
+            }
+            
+            #country, 
+            #cep, 
+            #address, 
+            #compl,
+            #city,
+            #state
+            {
+                width:220px;
+                font-size:10pt;
+                color:blue;
+            }
+            
+        </style>
+        
+        <script>
+            var app = new kendo.mobile.Application(),
+                validator;
+            
+            function onInit(e)
+            {
+                //init the validatior
+                validator = e.view.element.kendoValidator().data("kendoValidator");
+            }
+            
+            function validate() 
+            {
+                if (validator.validate()) 
+                {
+                    app.navigate("pin.html");
+                }
+            }
+            
+            function clear() {
+                $(".validation-summary .k-invalid-msg").hide();
+                app.view().scroller.reset();
+            }
+        </script>
+    
     </body>
 </html>

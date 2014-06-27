@@ -13,7 +13,7 @@
 
         <div id="tabstrip-paypalverification" 
              data-role="view"
-             data-title="Identificação PayPal" data-init="onInit">
+             data-title="Identificação PayPal" data-init="onInit" id="form">
 
             <header data-role="header" >
                 <div data-role="navbar" >
@@ -31,37 +31,59 @@
                         E-mail:
                     </div>
                     <div style="float:left;width:230px">
-                        <input type="email" class="k-textbox" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px" required="*"/>
+                        <input type="email" class="k-textbox" id="email" name="email" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px" validationMessage="Informe um e-mail válido" required=""/>
+                        <div class="validation-summary" style="margin-top:-10px;padding-top:10px;padding-bottom:10px;">
+                            <span class="k-invalid-msg" data-for="email"></span>
+                        </div>
+
                     </div>
+
                 </label>
             </div>
 
-            <a data-role="button" data-click="validate" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" type="button">Validar</a>
+            <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" type="button" id="validate" data-click="validate" >Validar</a>
+        </div>
 
-        <script>
+        <style scoped>
+            .validation-summary
+            {
+                min-height: 0.001em;
+                background-color: #fff;
+            }
             
-        var app = new kendo.mobile.Application(), validator;
-
-        function onInit(e) 
-        {
-            validator = e.view.element.kendoValidator().data("kendoValidator");
-        }
-
-        function validate() 
-        {
-            if(validator.validate()) 
+            .validation-summary .k-invalid-msg
             {
-                 app.navigate("address.html"); 
+                font-size: 10pt;
+                color: red;
+                display: block;
+                margin: 10px 10px 10px 0px;
             }
-            else
-            {
-                //alert("Obrigatório");
+            
+            #email{
+                 width:220px;
+                font-size:10pt;
+                color:blue;
+                padding-left:5px;
             }
-        }
-
+            
+            </style>
         
-    </script>
-
-
+        <script>
+        
+            var app = new kendo.mobile.Application(), validator;
+            
+            function onInit(e) {
+                validator = e.view.element.kendoValidator().data("kendoValidator");
+            }
+            
+            function validate() {
+                if (validator.validate()) {
+                    app.navigate("address.html");
+                } else {
+                }
+            }
+            
+        </script>
+        
     </body>
 </html>
