@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+      <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/app.js"></script>
+    </head>
+    <body>
+        
+         <div id="tabstrip-preferences" 
+        data-role="view"
+        data-title="Preferências Regionais" >
+        
+        <header data-role="header" >
+            <div data-role="navbar" >
+                <span data-role="view-title" ></span>
+            </div>
+        </header>
+        
+        <p class="text-regular">
+            Escolha o seu fuso horário e o idioma:
+        </p>
+        
+        <div class="form-Container">
+            <label>
+                <div class="text-formContainer" >
+                    Fuso
+                </div>
+                <div style="float:left;width:230px">
+                	<input type="email" value="" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px"/>
+                </div>
+            </label>
+        </div>
+        <div class="form-Container">
+            <label>
+                <div class="text-formContainer" >
+                    Idioma
+                </div>
+                <div style="float:left;width:230px">
+                	<input type="email" value="" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px"/>
+                </div>
+            </label>
+        </div>
+        
+        	<a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="pin.html">Salvar</a>
+        
+        
+    </div>
+    </body>
+</html>

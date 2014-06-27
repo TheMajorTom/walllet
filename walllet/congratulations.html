@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <head>
     <title></title>
     <meta charset="utf-8" />
@@ -19,29 +17,36 @@
     
 <body >
     
-    
-    <script>
-        new kendo.mobile.Application($(document.body), 
-        {
-            platform:"ios7"
-    	});
-    </script>
-    
     <!--Welcome View-->
     <div id="tabstrip-welcome" style="background-color:#fff"
         data-role="view"
-        data-title="Bem-vindo ao Walllet" >
+        data-title="Novo Usuário Walllet" >
         <header data-role="header" >
             <div data-role="navbar" >
                 <span data-role="view-title" ></span>
             </div>
         </header>
         
-        <div class="welcome-image"></div>
         <p class="text-regular">
-            Para criar sua conta walllet é necessário configurarmos o seu perfil. Clique no botão "Começar" para prosseguir.
+            Parabéns, sua conta walllet foi <br/> criada com sucesso!! 
         </p>
-        <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="wallets.html">Começar</a>
+        <p class="text-regular" style="margin-bottom:10px">
+        	Aqui estão o seu <br/> WIN e sua palavra secreta:
+        </p>
+        
+        <div style="width:80%;margin:20px auto;display:block;font-size:12pt;;white-space:nowrap;text-align:center;font-weight:600;padding:10px;border:1px solid #d2d2d2;height:80px">
+            <center>
+                <div style="margin-bottom:10px">
+                   Seu WIN : 0987654321
+                </div>
+                <div >
+                   Palavra Secreta: 157cb00d
+                </div>
+            </center>
+        </div>
+        
+        <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="#">Iniciar Walllet</a>
+        
     </div>
+    
 </body>
-</html>
