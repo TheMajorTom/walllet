@@ -13,7 +13,7 @@
 
         <div id="tabstrip-paypalverification" 
              data-role="view"
-             data-title="Identificação PayPal" >
+             data-title="Identificação PayPal" data-init="onInit">
 
             <header data-role="header" >
                 <div data-role="navbar" >
@@ -31,14 +31,37 @@
                         E-mail:
                     </div>
                     <div style="float:left;width:230px">
-                        <input type="email" value="" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px"/>
+                        <input type="email" class="k-textbox" style="border:1px solid #d2d2d2;width:100%;margin:0px auto;height:30px" required="*"/>
                     </div>
                 </label>
             </div>
 
-            <a data-role="button" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" href="address.html">Validar</a>
+            <a data-role="button" data-click="validate" style="position:absolute;bottom:20px;left:15%;text-align:center;width:70%;height:50px;font-size:14pt;" type="button">Validar</a>
+
+        <script>
+            
+        var app = new kendo.mobile.Application(), validator;
+
+        function onInit(e) 
+        {
+            validator = e.view.element.kendoValidator().data("kendoValidator");
+        }
+
+        function validate() 
+        {
+            if(validator.validate()) 
+            {
+                 app.navigate("address.html"); 
+            }
+            else
+            {
+                //alert("Obrigatório");
+            }
+        }
 
         
+    </script>
+
 
     </body>
 </html>
